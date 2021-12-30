@@ -1,12 +1,17 @@
-<div class="card-container">
+<div class="card-container" *ngIf="data"
+[ngClass]="{'work': timeData.title === 'Work', 'play' : timeData.title === 'Play',
+     'study' : timeData.title === 'Study',
+     'exercise' : timeData.title === 'Exercise',
+     'social' : timeData.title === 'Social',
+     'self-care' : timeData.title === 'Self Care'}">
     <div class="detail-container">
         <div class="title">
-            <h3>Work</h3>
-            <h1>32hrs</h1>
+            <h3>{{timeData.title}}</h3>
+            <h1>{{data.previous}}hrs</h1>
         </div>
         <div class="options">
-            <img src="assets/images/icon-ellipsis" alt="ellipsis">
-            <p>Last Week - 36hrs</p>
+            <img src="assets/images/icon-ellipsis.svg" alt="ellipsis">
+            <p>Last Week - {{data.current}}hrs</p>
         </div>
     </div>
 </div>

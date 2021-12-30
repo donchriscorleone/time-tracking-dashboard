@@ -1,10 +1,82 @@
 @import '../../scss/variables';
 
 .card-container {
+    border-radius: 15px;
+    padding-top: 35px;
 
+    background-image: url('../../../assets/images/icon-work.svg');
+    background-position: right 10px top;
+    background-repeat: no-repeat;
+    background-color: $work;
 }
 
 .detail-container {
     background-color: $dark-blue;
-    height: 80%;
+    border-radius: 15px;
+    padding: 15px 20px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h3, h1 {
+            font-weight: $font-light;
+            color: white;
+            margin: 2px;
+        }
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: $font-light;
+        }
+    }
+
+    .options {
+        text-align: right;
+
+        p {
+            font-size: .9rem;
+            color: $desaturated-blue;
+        }
+    }
+}
+
+
+// depends on the time data
+.work {
+    background-color: $work;
+    background-image: url('../../../assets/images/icon-work.svg');
+}
+
+.exercise {
+    background-color: $exercise;
+    background-image: url('../../../assets/images/icon-exercise.svg');
+    
+}
+
+.play {
+    background-color: $play;
+    background-image: url('../../../assets/images/icon-play.svg');
+}
+
+.study {
+    background-color: $study;
+    background-image: url('../../../assets/images/icon-study.svg');
+}
+
+.social {
+    background-image: url('../../../assets/images/icon-social.svg');
+    background-color: $social;
+}
+
+.self-care {
+    background-image: url('../../../assets/images/icon-self-care.svg');
+    background-color: $self-care;
 }

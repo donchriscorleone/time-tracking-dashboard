@@ -1,3 +1,4 @@
-<main>
+<main *ngIf="!!times.length">
     <profile-card></profile-card>
+    <time-card *ngFor="let time of times" [timeData]="time"></time-card>
 </main>

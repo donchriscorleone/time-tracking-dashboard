@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import * as data from './data.json'
+import * as datas from './data.json'
 
 @Component({
   selector: 'app-root',
@@ -8,4 +8,12 @@ import * as data from './data.json'
 })
 export class AppComponent {
   title = 'time-tracking-dashboard';
+  times: any[] = [];
+
+  constructor() {
+    Object.keys(datas).forEach(key => {
+      const index = parseInt(key);
+      if (datas[index]) this.times.push(datas[index]);
+    });
+  }
 }
