@@ -15,3 +15,44 @@ main {
     display: grid;
     row-gap: 20px;
 }
+
+@media screen and (min-width: 400px) {
+    main {
+        max-width: 270px;
+        margin: 12vh auto 40px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    main {
+        max-width: 550px;
+        margin: 12vh auto 40px;
+        column-gap: 30px;
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    profile-card {
+        grid-column: 1 / 3;
+        max-width: 350px;
+        justify-self: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        max-width: 970px;
+        margin: 20vh auto;
+        column-gap: 30px;
+
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    profile-card {
+        grid-row: 1 / 3;
+        grid-column: 1/2;
+        max-width: 350px;
+        justify-self: center;
+        height: 100%;
+    }
+}

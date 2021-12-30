@@ -7,8 +7,8 @@
         </div>
     </div>
     <div class="buttons">
-        <a>Daily</a>
-        <a>Weekly</a>
-        <a>Monthly</a>
+        <a [routerLink]="['/']" [routerLinkActive]="['active']" [queryParams]="{'timeframe': 'daily'}">Daily</a>
+        <a [routerLink]="['/']" [routerLinkActive]="['active']" [queryParams]="{'timeframe': 'weekly'}">Weekly</a>
+        <a [routerLink]="['/']" [routerLinkActive]="['active']" [queryParams]="{'timeframe': 'monthly'}">Monthly</a>
     </div>
 </div>
